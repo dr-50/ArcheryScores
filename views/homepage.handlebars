@@ -1,40 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
+<table>
+    <tr>
+        <th>End</th>
+        <th>Arrow1</th>
+        <th>Arrow2</th>
+        <th>Arrow3</th>
+        <th>EndTotal</th>
+        <th>X Count</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><textarea id="end1arrow1"></textarea></td>
+        <td><textarea id="end1arrow2"></textarea></td>
+        <td><textarea id="end1arrow3"></textarea></td>
+        <td><a></a></td>
+        <td><a></a></td>
+    </tr>
+        <tr>
+        <td>2</td>
+        <td><textarea id="end2arrow1"></textarea></td>
+        <td><textarea id="end2arrow2"></textarea></td>
+        <td><textarea id="end2arrow3"></textarea></td>
+        <td><a></a></td>
+        <td><a></a></td>
+    </tr>
+        <tr>
+        <td>3</td>
+        <td><textarea id="end3arrow1"></textarea></td>
+        <td><textarea id="end3arrow2"></textarea></td>
+        <td><textarea id="end3arrow3"></textarea></td>
+        <td><a></a></td>
+        <td><a></a></td>
+    </tr>
+        <tr>
+        <td>4</td>
+        <td><textarea id="end4arrow1"></textarea></td>
+        <td><textarea id="end4arrow2"></textarea></td>
+        <td><textarea id="end4arrow3"></textarea></td>
+        <td><a></a></td>
+        <td><a></a></td>
+    </tr>
+        <tr>
+        <td>5</td>
+        <td><textarea id="end5arrow1"></textarea></td>
+        <td><textarea id="end5arrow2"></textarea></td>
+        <td><textarea id="end5arrow3"></textarea></td>
+        <td><a></a></td>
+        <td><a></a></td>
+    </tr>
+        <tr>
+        <td>6</td>
+        <td><textarea id="end6arrow1"></textarea></td>
+        <td><textarea id="end6arrow2"></textarea></td>
+        <td><textarea id="end6arrow3"></textarea></td>
+        <td><a></a></td>
+        <td><a></a></td>
+    </tr>
+        <tr>
+        <td>7</td>
+        <td><textarea id="end7arrow1"></textarea></td>
+        <td><textarea id="end7arrow2"></textarea></td>
+        <td><textarea id="end7arrow3"></textarea></td>
+        <td><a></a></td>
+        <td><a></a></td>
+    </tr>
+        <tr>
+        <td>8</td>
+        <td><textarea id="end8arrow1"></textarea></td>
+        <td><textarea id="end8arrow2"></textarea></td>
+        <td><textarea id="end8arrow3"></textarea></td>
+        <td><a></a></td>
+        <td><a></a></td>
+    </tr>
+        <tr>
+        <td>9</td>
+        <td><textarea id="end9arrow1"></textarea></td>
+        <td><textarea id="end9arrow2"></textarea></td>
+        <td><textarea id="end9arrow3"></textarea></td>
+        <td><a></a></td>
+        <td><a></a></td>
+    </tr>
+        <tr>
+        <td>10</td>
+        <td><textarea id="end10arrow1"></textarea></td>
+        <td><textarea id="end10arrow2"></textarea></td>
+        <td><textarea id="end10arrow3"></textarea></td>
+        <td><a></a></td>
+        <td><a></a></td>
+    </tr>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Score Tracker</title>
-    <link rel="styelsheet" href="../../public//styelsheets/styel.css"> 
-</head>
+</table>
 
-<body>
-    <div class ="wrapper">
-        <header>
-            <h1>
-                <a href="/">Archery Score Tracker</a>
-            </h1>
-            <nav>
-                {{#if loggedIn}}
-                <a href="/dashboard">dashboard</a>
-                <button id="logout" class="btn-no-style">logout</button>
-                {{else}}
-                <a href="/login">login</a>
-                {{/if}}
-            </nav>
-        </header>
-        <main>
-            <a>Main Page Data Here</a>
-        </main>
-        <footer>
-            Thanks for visiting!
-        </footer>
-    </div>
-
-    {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
-    {{/if}}
-</body>
-
-
-</html>
+{{!-- update end total javascript to auto sum the values entered in text boxes for end and count the number of Xs in each row --}}

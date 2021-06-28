@@ -3,8 +3,9 @@ const sequelize = require('../config/connection');
 const { User, Bow, Scores } = require('../models');
 
 router.get('/', (req, res) => {
-    console.log('=======================');
-    res.render('homepage')
+    const messageAlert = "home called";
+    console.log('=======================home route called');
+    res.render('homepage', {messageAlert})
 })
 
 // router.get('/login', (req, res) => {
