@@ -1,0 +1,18 @@
+{
+  "name": "archeryscorekeeper",
+  "version": "1.0.0",
+  "description": "This site provides users with the ability to track their equipment as well as provide detailed views of their historical shooting trends to give a better insight into their trends and areas of improvement by entering each arrow score by end.",
+  "main": "source.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.4"
+  }
+}
