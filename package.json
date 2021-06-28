@@ -1,18 +1,32 @@
 {
-  "name": "archeryscorekeeper",
+  "name": "archeryscore",
   "version": "1.0.0",
   "description": "This site provides users with the ability to track their equipment as well as provide detailed views of their historical shooting trends to give a better insight into their trends and areas of improvement by entering each arrow score by end.",
   "main": "source.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2",
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dr-50/ArcheryScores.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dr-50/ArcheryScores/issues"
+  },
+  "homepage": "https://github.com/dr-50/ArcheryScores#readme"
 }
