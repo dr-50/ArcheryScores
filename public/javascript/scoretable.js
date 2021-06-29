@@ -65,7 +65,10 @@ const end10Xcount = document.getElementById('end10Xcount')
 function sumEnd() {
 
     function charToInt(c){
+        acceptableArr = ['1','2','3','4','5','6','7','8','9','10','x','X','0','']
+        if (n=acceptableArr.includes(c)){
         switch(c){
+            
             case 'X': return 10;
             case 'x': return 10;
             case '': return 0;
@@ -80,6 +83,8 @@ function sumEnd() {
             case '9': return 9;
             case '10': return 10;
             break;
+
+        }
         }
     }
 
@@ -112,3 +117,4 @@ function sumEnd() {
     end9Xcount.innerHTML=(xCount($(end9arrow1).val()) || 0) + (xCount($(end9arrow2).val()) || 0) + (xCount($(end9arrow3).val()) || 0)
     end10Xcount.innerHTML=(xCount($(end10arrow1).val()) || 0) + (xCount($(end10arrow2).val()) || 0) + (xCount($(end10arrow3).val()) || 0)
 }
+

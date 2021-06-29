@@ -2,18 +2,11 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { User, Bow, Scores } = require('../models');
 
-router.get('/', (req, res) => {
+router.get('/scoreentry', (req, res) => {
     const messageAlert = "home called";
     console.log('=======================home route called');
-    res.render('homepage')
+    res.render('standardscorepage')
 })
 
-router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return
-    }
-    res.render('login');
-})
 
 module.exports = router;
