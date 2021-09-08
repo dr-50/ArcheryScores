@@ -1,4 +1,19 @@
-<table>
+<h3 id="greeting"></h3>
+<div class="score-table">
+  <label for="rounds">Choose A Game:</label>
+
+  <select name="rounds" id="rounds">
+    <option value="--">--</option>
+    <option value="3-150">3 Spot - 150</option>
+    <option value="3-300">3 Spot - 300</option>
+    <option value="5-150">5 Spot - 150</option>
+    <option value="5-300">5 Spot - 300</option>
+  </select>
+
+  <input type="button" value="Generate a Game" onclick="createNewRound()" />
+</div>
+
+{{! <table>
     <tr>
         <th>End</th>
         <th>Arrow1</th>
@@ -88,9 +103,11 @@
         <td id="end10Xcount">0</td>
     </tr>
 
-</table>
+</table> }}
 
 <button type="submit" style="margin-top: 20px; margin-left: 30%">Save</button>
 <script src="/javascript/scoretable.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<script src="/javascript/newround.js"></script>
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+></script>

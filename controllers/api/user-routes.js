@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Bow, Scores } = require('../../models');
 
+
 router.post('/', (req, res) => {
     // expects {username: 'User', email: 'email@gmail.com', password: 'password1234'}
     User.create({
@@ -13,7 +14,7 @@ router.post('/', (req, res) => {
           req.session.userid = dbUserData.id;
           req.session.username = dbUserData.username;
           req.session.loggedIn = true;
-    
+          myStorage.setItem('username',dbUserData.username)
           res.json(dbUserData);
         });
       })
@@ -41,12 +42,12 @@ router.post('/', (req, res) => {
         res.status(400).json({ message: 'Incorrect password!' });
         return;
       }
-  
+      
       req.session.save(() => {
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
         req.session.loggedIn = true;
-    
+        
         res.json({ user: dbUserData, message: 'You are now logged in!' });
       });
     });
@@ -62,4 +63,15 @@ router.post('/', (req, res) => {
       res.status(404).end();
     }
   });
+
+  router.get('/email', (req,res) => {
+    User.findOne({
+      where:{email: req.body.email}
+    }).then(dbData => {
+      sessionStorage.setItem('key',dbData.username)
+      res.json(dbData)
+    })
+
+  })
+
   module.exports = router;

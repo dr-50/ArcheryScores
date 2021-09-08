@@ -1,3 +1,4 @@
+
 const end1arrow1 = document.getElementById('end1arrow1');
 const end1arrow2 = document.getElementById('end1arrow2');
 const end1arrow3 = document.getElementById('end1arrow3');
@@ -118,3 +119,9 @@ function sumEnd() {
     end10Xcount.innerHTML=(xCount($(end10arrow1).val()) || 0) + (xCount($(end10arrow2).val()) || 0) + (xCount($(end10arrow3).val()) || 0)
 }
 
+const userNameEL=document.getElementById('greeting')
+const emailVal = sessionStorage.getItem('username')
+const user = session.username
+
+console.log(user)
+userNameEL.innerHTML=emailVal;
