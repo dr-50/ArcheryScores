@@ -107,6 +107,18 @@ td {
   border: 1px solid black;
 }
 
+table {
+  counter-reset: rowNumber;
+}
+
+table tr::before {
+  display: table-cell;
+  counter-increment: rowNumber;
+  content: counter(rowNumber) ".";
+  padding-right: 0.3em;
+  text-align: right;
+}
+
 textarea,
 input {
   padding: 0.5%;

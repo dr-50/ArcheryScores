@@ -1,6 +1,6 @@
 <h3 id="greeting"></h3>
 <div class="score-table">
-  <label for="rounds">Choose A Game:</label>
+  {{!-- <label for="rounds">Choose A Game:</label>
 
   <select name="rounds" id="rounds">
     <option value="--">--</option>
@@ -8,10 +8,23 @@
     <option value="3-300">3 Spot - 300</option>
     <option value="5-150">5 Spot - 150</option>
     <option value="5-300">5 Spot - 300</option>
-  </select>
+  </select> --}}
+<div>
+  <label for="arrows">Number of arrows per end (1-100):</label>
+
+<input type="number" id="arrows" name="arrows"
+       min="1" max="100">
+
+<label for="ends">Number of ends (1-10):</label>
+
+<input type="number" id="ends" name="ends"
+       min="1" max="10">
+</div>
 
   <input type="button" value="Generate a Game" onclick="createNewRound()" />
 </div>
+
+
 
 {{! <table>
     <tr>

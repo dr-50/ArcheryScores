@@ -1,35 +1,46 @@
 var end = 0;
 var rounds = 0
 var gameMode
+
+
+
 function createNewRound() {
     
-    var gameOptions = document.getElementById("rounds")
-    var game = gameOptions.value
+    // var gameOptions = document.getElementById("rounds")
+    // var game = gameOptions.value
 
     
-    // switch(x){
-    //     case 'X': return 1;
-    //     case 'x': return 1;
-    //     case (x !== 'x' || x !=='X'): 0;
+    // // switch(x){
+    // //     case 'X': return 1;
+    // //     case 'x': return 1;
+    // //     case (x !== 'x' || x !=='X'): 0;
+    // // }
+
+    // if (game==="--"){ 
+    //     alert("pick a game option")
+    // } else {
+    //     switch(game) {
+    //         case '3-150': gameMode=[3,5]; break;
+    //         case '3-300': gameMode=[3,10]; break;
+    //         case '5-150': gameMode=[5,5]; break;
+    //         case '5-300': gameMode=[5,10]; break;
+    //         // case '5-150': return gameMode=[3,10]; 
+    //         // case '3-150': return gameMode=[5,5]; 
+    //         // case '5-150': return gameMode=[5,10];
+    //         //break;
+            
+    //     }
+    //     end = gameMode[0]
+    //     rounds = gameMode[1]
     // }
 
-    if (game==="--"){ 
-        alert("pick a game option")
-    } else {
-        switch(game) {
-            case '3-150': gameMode=[3,5]; break;
-            case '3-300': gameMode=[3,10]; break;
-            case '5-150': gameMode=[5,5]; break;
-            case '5-300': gameMode=[5,10]; break;
-            // case '5-150': return gameMode=[3,10]; 
-            // case '3-150': return gameMode=[5,5]; 
-            // case '5-150': return gameMode=[5,10];
-            //break;
-            
-        }
-        end = gameMode[0]
-        rounds = gameMode[1]
-    }
+var arrowCount = document.getElementById("arrows").value
+
+var endCount = document.getElementById("ends").value
+
+
+console.log(arrowCount)
+console.log(endCount)
 
     var tblExists = document.getElementsByTagName('table')
     $("table").remove()
@@ -41,8 +52,10 @@ function createNewRound() {
     var tbl = document.createElement("table");
     var tblBody = document.createElement("tbody");
    
+    var tblHeaderText=document.createTextNode('End')
+    tbl.appendChild(tblHeaderText)
 
-    for (var i=0; i<end; i++){
+    for (var i=0; i<arrowCount; i++){
         var tblHeader = document.createElement("th")
         var tblHeaderText = document.createTextNode('Arrow '+ (i+1))
         tblHeader.appendChild(tblHeaderText)
@@ -51,11 +64,11 @@ function createNewRound() {
     
   
     // creating all cells
-    for (var i = 0; i < rounds; i++) {
+    for (var i = 0; i < endCount; i++) {
       // creates a table row
       var row = document.createElement("tr");
   
-      for (var j = 0; j < end; j++) {
+      for (var j = 0; j < arrowCount; j++) {
         // Create a <td> element and a text node, make the text
         // node the contents of the <td>, and put the <td> at
         // the end of the table row
