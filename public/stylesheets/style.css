@@ -107,6 +107,11 @@ td {
   border: 1px solid black;
 }
 
+td input {
+  width: 100%;
+  font-size: larger;
+}
+
 table {
   counter-reset: rowNumber;
 }
@@ -117,6 +122,27 @@ table tr::before {
   content: counter(rowNumber) ".";
   padding-right: 0.3em;
   text-align: right;
+}
+.score-table {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-content: center;
+
+}
+
+.table-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* width: 100vw; */
+  justify-content: center;
+}
+.table-inputs input {
+  width: 80%;
+  margin-right: 30px;
+  height: 30px;
+  font-size: larger;
 }
 
 textarea,
